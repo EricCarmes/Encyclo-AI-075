@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Smartbook - AudioBook</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="Couverture_resized.jpg" alt="Couverture" style="width: 20%; height: auto; margin-bottom: 20px;">
+
+  <div class="logos">
+    <img src="PLANCHE-1a.jpg" alt="Logo AudioBook" style="width: 5%; height: auto; margin-bottom: 20px;">
+    <img src="Logo_resized.jpg" alt="Logo Encyclo-AI" style="width: 10%; height: auto; margin-bottom: 20px;">
+  </div>
+
+<!-- Bloc bouton Play + potentiomètre vitesse -->
+<div class="player-controls">
+  <!-- Gros bouton Play -->
+  <button id="bigPlayBtn" aria-label="Lire ou mettre en pause le livre audio">▶</button>
+
+  <!-- Bloc vitesse -->
+  <div id="speedControl">
+    <div class="speed-label">Vitesse</div>
+    <div class="speed-knob-wrapper">
+      <input type="range" id="speedKnob" min="0.9" max="1.1" step="0.05" value="1" orient="vertical">
+
+      <!-- Colonne repères alignés -->
+      <div id="speedLabels">
+        <span>++</span>
+        <span>+</span>
+        <span>=</span>
+        <span>-</span>
+        <span>--</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Lecteur audio -->
+  <audio id="audioPlayer" controls></audio>
+
+  <!-- Playlist -->
+  <ul id="playlist">
+    <li><a href="Introduction.mp3" style="font-weight: bold;">INTRODUCTION - L'IMPORTANCE DE L'EMPATHIE DANS UN MONDE EN MUTATION</a></li>
+
+    <li style="font-weight: bold;">Chapitre 1 - DEFINITION DE L'EMPATHIE</li>
+    <ul>
+      <li><a href="Chapitre1-1.mp3">1.1 - Qu'est-ce que l'empathie ?</a></li>
+      <li><a href="Chapitre1-2.mp3">1.2 - L'empathie cognitive : comprendre les pensées d'autrui</a></li>
+      <li><a href="Chapitre1-3.mp3">1.3 - L'empathie émotionnelle : ressentir les émotions d'autrui</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 2 - L'IMPORTANCE DE L'EMPATHIE DANS LES RELATIONS HUMAINES</li>
+    <ul>
+      <li><a href="Chapitre2-1.mp3">2.1 - L'empathie comme fondement des relations humaines</a></li>
+      <li><a href="Chapitre2-2.mp3">2.2 - Empathie et résolution des conflits</a></li>
+      <li><a href="Chapitre2-3.mp3">2.3 - L'empathie dans les relations interculturelles</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 3 - EMPATHIE ET COMMUNICATION</li>
+    <ul>
+      <li><a href="Chapitre3-1.mp3">3.1 - L'écoute active et l'empathie</a></li>
+      <li><a href="Chapitre3-2.mp3">3.2 - Empathie et langage non verbale</a></li>
+      <li><a href="Chapitre3-3.mp3">3.3 - Surmonter les barrières à l'empathie dans la communication</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 4 - EMPATHIE DANS LE MILIEU PROFESSIONNEL</li>
+    <ul>
+      <li><a href="Chapitre4-1.mp3">4.1 - L'empathie comme compétence clé pour les leaders</a></li>
+      <li><a href="Chapitre4-2.mp3">4.2 - Créer un environnement de travail empathique</a></li>
+      <li><a href="Chapitre4-3.mp3">4.3 - L'empathie dans les professions d'aide</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 5 - DEVELOPPEMENT DE L'EMPATHIE</li>
+    <ul>
+      <li><a href="Chapitre5-1.mp3">5.1 - L'éducation à l'empathie dès le plus jeune âge</a></li>
+      <li><a href="Chapitre5-2.mp3">5.2 - Pratiques pour renforcer l'empathie chez les adultes</a></li>
+      <li><a href="Chapitre5-3.mp3">5.3 - Le rôle de la culture dans le développement de l'empathie</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 6 - LIMITES DE L'EMPATHIE</li>
+    <ul>
+      <li><a href="Chapitre6-1.mp3">6.1 - Les dangers de l'épuisement compassionnel</a></li>
+      <li><a href="Chapitre6-2.mp3">6.2 - Établir des limites saines dans l'empathie</a></li>
+      <li><a href="Chapitre6-3.mp3">6.3 - Quand l'empathie devient un obstacle</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 7 - LES BIAIS DE L'EMPATHIE</li>
+    <ul>
+      <li><a href="Chapitre7-1.mp3">7.1 - Les préjugés culturels et leur impact sur l'empathie</a></li>
+      <li><a href="Chapitre7-2.mp3">7.2 - L'empathie sélective : pourquoi nous ressentons plus pour certains</a></li>
+      <li><a href="Chapitre7-3.mp3">7.3 - Surmonter les biais pour une empathie universelle</a></li>
+    </ul>
+
+    <li style="font-weight: bold;">Chapitre 8 - EMPATHIE ET DIVERSITE</li>
+    <ul>
+      <li><a href="Chapitre8-1.mp3">8.1 - L'empathie comme outil d'inclusion sociale</a></li>
+      <li><a href="Chapitre8-2.mp3">8.2 - Promouvoir le dialogue interculturel grâce à l'empathie</a></li>
+      <li><a href="Chapitre8-3.mp3">8.3 - L'empathie dans un monde globalisé</a></li>
+    </ul>
+
+    <li><a href="Conclusion.mp3" style="font-weight: bold;">CONCLUSION - L'EMPATHIE : UNE CLE POUR UN AVENIR HARMONIEUX</a></li>
+  </ul>
+
+  <p><a href="Annexes.pdf" target="_blank">📄 Consulter les annexes du livre</a></p>
+  <p><a href="mentions_legales.pdf">Mentions légales</a></p>
+
+  <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
+  <script src="lecteur.js"></script>
+</body>
+</html>
